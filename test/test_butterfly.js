@@ -38,9 +38,10 @@ contract("Butterfly",
       const zero = await factory.requestButterfly(accounts[1],{from: accounts[1]});
       const one = await factory.requestButterfly(accounts[2],{from: accounts[2]});
   
-    	const butterfly1 = await Butterfly.at(zero);
-    	const butterfly2 = await Butterfly.at(zero);
+    	const butterfly1 = await factory.butterflyOf(accounts[1]);
+    	const butterfly2 = await factory.butterflyOf(accounts[2]);
 
+      
 
       return zero;
 

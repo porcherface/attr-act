@@ -1,0 +1,56 @@
+
+
+
+MacBook-Pro-di-Sara-5:attr-act saramilone$ truffle test
+Using network 'test'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+  Contract: Butterfly
+    Basic Functions
+      ✔ should assert true
+      ✔ should be unique (681ms)
+
+  Contract: Caos
+    Basic Functions
+      ✔ should assert true (43ms)
+      ✔ should return expected gets (105ms)
+      ✔ checks minter balance (95ms)
+      ✔ test transfer (122ms)
+      ✔ test approve (124ms)
+      ✔ test approved transfer (151ms)
+    Reverts
+      ✔ test illecittransfer (858ms)
+      ✔ test not enough funds (152ms)
+
+  Contract: Factory
+    Receive Functions
+      ✔ checks viewPlayers (53ms)
+      ✔ test ownerAdd reverts (90ms)
+      ✔ test ownerAdd (96ms)
+      ✔ test enterWithEther (69ms)
+      ✔ test enterWithEther revert (83ms)
+      ✔ test enterWithCaos (460ms)
+    Request Functions
+      ✔ requests a Butterfly (356ms)
+      ✔ gets tokendata (64ms)
+
+  Contract: Faucet
+    Basic Functions
+      ✔ it should assert true
+      ✔ it should get Caos balance (68ms)
+      ✔ must revert in case of setToken from random (660ms)
+    Owner Functions
+      ✔ should set faucet size (151ms)
+    Faucet Functions
+      ✔ should give 1 Caos once (191ms)
+      ✔ should revert when asked twice
+
+
+  24 passing (8s)
+
+MacBook-Pro-di-Sara-5:attr-act saramilone$ 

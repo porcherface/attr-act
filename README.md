@@ -40,12 +40,12 @@ further documentation on how to decode the butterfly dynamic parameters from tok
 
 Here is all you need to interact with these contract on Ropsten, Ropsten is free of charge, it will cost zero, give it a try!
 
--- ADDRESSES ON ROPSTEN NETWORK --
+	-- ADDRESSES ON ROPSTEN NETWORK --
 
-deployer address: 0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+	deployer address: 0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
 
-CAOS      > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89
-FACTORY   > contract address:    0x958dc8d320C7f7124829d35B249eE57bF0FB230c
-FAUCET    > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
+	CAOS      > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89
+	FACTORY   > contract address:    0x958dc8d320C7f7124829d35B249eE57bF0FB230c
+	FAUCET    > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
 
 (if you need some ropstenETH you can have em here: https://faucet.egorfine.com/)

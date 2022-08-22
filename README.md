@@ -1,4 +1,4 @@
-# chain-pi
+# Butterfly
 ==========
 
 The butterfly project: A series of NFT based on the famous butterfly effect. each nft is the tokenization of a chaotic attractor.
@@ -6,10 +6,36 @@ Every attractor is different from each other, every attractor is different from 
 
 BUTTERFLIES (the name we are giving to these systems) are completely #on chain# and they can be reproduced by simple third party hardware or software. the house will also provide to butterfly acquirers a free-from-charge software to reproduce the token at any given moment in time. 
 
-diffent parameters will have different behaviour, an attractor can ideally last forever or can extinguish like a candle flame, depending on the initial conditions.
+# How it works: 
 
-in order to have an error-free integration over time Butterflies have a sensible amount of pre-calculations that will be executed only once, offchain and with a dedicated hardware, on user mint request.
+How to get Caos: request 1 Caos from the faucet address, simply calling the 
+    
+    faucet.getCaosFromFaucet()
 
-the butterfly factory is the contract resposible of handling the distribution of butterflies, and is responsible of the certification for each token to be different. it will accept an erc20 token as its currency, called CAOS. by sending CAOS to the factory, the user can create a unique butterfly
+please notice that you can call this function only once
 
-CAOS will have its own feature and a market will be implemented around the usage of CAOS and its interaction with BUTTERFLIES
+
+how to get a Butterfly: approve the factory address to transfer 1 CAOS and claim your butterfly using
+	
+	factory.requestButterfly(address)
+
+you can call this function to gift a butterfly to another address or to yourself, please insert the addr accordingly
+
+the butterfly will be transferred to your address, if you don't see your butterfly address on mint phase you
+can use the 
+
+	factory.players
+
+mapping to check your butterfly address
+
+
+
+
+-- ADDRESSES ON ROPSTEN NETWORK --
+
+deployer address: 0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+
+CAOS      > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89
+FACTORY   > contract address:    0x958dc8d320C7f7124829d35B249eE57bF0FB230c
+FAUCET    > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
+

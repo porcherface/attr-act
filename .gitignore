@@ -19,6 +19,8 @@ contracts/factory.sol
 contracts/butterfly.sol
 interact/private
 *.secret
+*.private
+accounts.py
 
 .metadata
 tmp/

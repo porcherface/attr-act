@@ -41,7 +41,7 @@ further documentation on how to decode the butterfly dynamic parameters from tok
 Here is all you need to interact with these contract on Ropsten, Ropsten is free of charge, it will cost zero, give it a try!
 
 	-- ADDRESSES ON ROPSTEN NETWORK --
-
+	
 	deployer address: 0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
 
 	CAOS      > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89

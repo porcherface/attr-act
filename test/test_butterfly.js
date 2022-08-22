@@ -7,6 +7,11 @@ const Butterfly = artifacts.require("Butterfly");
  * Ethereum client
  * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
  */
+
+module.exports = function(deployer) {
+  deployer.deploy(Butterfly, 0);
+};
+
 contract("Butterfly", 
 
 	function ( accounts ) {
@@ -15,10 +20,6 @@ contract("Butterfly",
   describe('Basic Functions', function () {
 		/* ********************************** */
   		it("should assert true", async function () {
-    	const token = await Token.deployed();
-    	const factory = await Factory.deployed();
-    	const butterfly = await Butterfly.deployed();
-
     	return assert.isTrue(true);
 		/* ********************************** */
   		}
@@ -29,8 +30,20 @@ contract("Butterfly",
   		it("should be unique", async function () {
     	const token = await Token.deployed();
     	const factory = await Factory.deployed();
-    	const butterfly1 = await Butterfly.deployed();
-    	const butterfly2 = await Butterfly.deployed();
+
+      let one_eth = web3.utils.toWei(String(1), "ether");
+      await web3.eth.sendTransaction({from: accounts[2], to: factory.address, value: one_eth})
+      await web3.eth.sendTransaction({from: accounts[1], to: factory.address, value: one_eth})
+      
+      const zero = await factory.requestButterfly(accounts[1],{from: accounts[1]});
+      const one = await factory.requestButterfly(accounts[2],{from: accounts[2]});
+  
+    	const butterfly1 = await Butterfly.at(zero);
+    	const butterfly2 = await Butterfly.at(zero);
+
+
+      return zero;
+
 		/* ********************************** */
   		}
 		);

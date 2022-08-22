@@ -28,8 +28,17 @@ can use the
 
 mapping to check your butterfly address
 
+# How do I see my butterfly?
 
+You can read your butterfly tokenData, only you can access this function
 
+	mybutterfly.getTokenData()
+
+further documentation on how to decode the butterfly dynamic parameters from tokenData will be released soon, Stay tuned! 
+
+# OK, lets do it:
+
+Here is all you need to interact with these contract on Ropsten, Ropsten is free of charge, it will cost zero, give it a try!
 
 -- ADDRESSES ON ROPSTEN NETWORK --
 
@@ -39,3 +48,4 @@ CAOS      > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89
 FACTORY   > contract address:    0x958dc8d320C7f7124829d35B249eE57bF0FB230c
 FAUCET    > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
 
+(if you need some ropstenETH you can have em here: https://faucet.egorfine.com/)

@@ -15,18 +15,21 @@ How to get Caos: request 1 Caos from the faucet address, simply calling the
 please notice that you can call this function only once.
 
 
-how to get a Butterfly: approve the factory address to transfer 1 CAOS 
+how to get a Butterfly: 
 
-alternatively you can simply send 0.1 ether (ropsten ether, don't worry) to the factory
-address and you will automatically receive your butterfly
+approve the factory address to transfer 1 CAOS 
+OR
+send 0.1 (ropsten)ether to the factory address  
 
-and claim your butterfly using
+you should now able to see your address in the player list.
+
+once you are a player, you can claim your butterfly using
 	
 	factory.requestButterfly(address)
 	
-you can call this function to gift a butterfly to another address or to yourself, please insert the addr accordingly
+(you can call this function to gift a butterfly to another address or to yourself, please insert the addr accordingly)
 
-the butterfly will be transferred to your address, if you don't see your butterfly address on mint phase you
+the butterfly will be transferred to the address specified, if you don't see your butterfly address on mint phase you
 can use the 
 
 	factory.players

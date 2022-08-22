@@ -4,8 +4,13 @@ import json
 from utils.abi import getAbi
 from utils.private import getPrivate
 
-# this script makes python interact with the ganache local blockchain
+try:
+	import utils.account
+except:
+	print("accounts.py not found, skipping")
 
+# this script makes python interact with the ropsten public blockchain
+# using infura provider
 w3 = web3.Web3(web3.HTTPProvider('https://ropsten.infura.io/v3/9b60a47c62674390b98e45168938a5fc'))
 
 
@@ -20,7 +25,7 @@ w3.eth.default_account = w3.eth.account.privateKeyToAccount(getPrivate())
 default_address = str(w3.eth.default_account.address)
 
 print(w3.eth.default_account)
-print()
+print(default_address)
 
 if __name__ == "__main__":
 	
@@ -41,40 +46,45 @@ if __name__ == "__main__":
 
 	while ans != "q" and ans != None:
 
-	
 		if ans == "a":
 			print("Adding self to player list (onlyowner)")
-			factory.functions.ownerAdd(wallet_address).call({'from': w3.eth.accounts[0]})
+			factory.functions.ownerAdd(wallet_address).call({'from': default_address})
 
+		'''
 		if ans == "m":
 			print("Minting a butterfly for self")
 			butterfly_address = factory.functions.requestButterfly(wallet_address).call({'from': w3.eth.accounts[0]})
 			print("minted at: "+str(butterfly_address))
+		'''
 
 		if ans == "f":
 			print("Factory state: ")
-			counter = factory.functions.getCounter().call({'from': w3.eth.accounts[0]})
-			players = factory.functions.viewPlayers().call()
+			counter = factory.functions.getCounter().call({'from': default_address})
+			players = factory.functions.viewPlayers().call({'from': default_address})
 			print("-flies minted: "+str(counter))
 			print("-players in list: "+str(players))
 
+		'''	
 		if ans == "g":
 			print("Getting butterfly tokendata")
 			butterfly = w3.eth.contract(address = butterfly_address, abi = getAbi("Butterfly"))
 			tokendata = butterfly.functions.getTokenData().call({'from': w3.eth.accounts[0]})
+		'''
+
 
 		if ans == "b":
 			print("faucet Balance: ")
-			faucetBalance = faucet.functions.getCaosBalance().call()
+			faucetBalance = faucet.functions.getCaosBalance().call({'from': default_address})
 			print(faucetBalance/ 10**decimals)
 			print("faucet Balance from tokenRegistry: ")
-			faucetBalance = token.functions.balanceOf(faucet_address).call()
+			faucetBalance = token.functions.balanceOf(faucet_address).call({'from': default_address})
 			print(faucetBalance/ 10**decimals)
 
+		'''
 		if ans == "d":	
 			faucetaddr = faucet.functions.myAddress().call()
 			print("faucet aDdress:"+ str(faucetaddr))
-
+		'''
 
 
 		ans = input("what u want to do?")

@@ -1,7 +1,7 @@
 # abi.py
 import json
 
-PATH_TRUFFLE_WK = '/Users/saramilone/ricciobbello/attr-actor'
+PATH_TRUFFLE_WK = '/Users/saramilone/ricciobbello/attr-act'
 
 
 def getAbi(contract_name):

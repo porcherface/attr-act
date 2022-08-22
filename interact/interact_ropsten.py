@@ -12,24 +12,25 @@ w3 = web3.Web3(web3.HTTPProvider('https://ropsten.infura.io/v3/9b60a47c62674390b
 print(w3.clientVersion)
 
 
-token_address		 = "0xaB1310F54bA225b5b0124CC702df8943f22e6ef0"
-factory_address      = "0x4a519d1f36556B53742ebc06eed6E8f0E6A95920"
-wallet_address       = "0x9eeeB99b306926C947182F80bE81730bC4d22F81"
-second_wallet		 = "0x295f5E1763AA97b611cE0C47a39E4e6dd170D9a5"
-wallet_private_key   = getPrivate()
-faucet_address       = "0x6755e51e869753de6976a1611a51C6464Ccb2440"
-wallet_address_int   = 0x9eeeB99b306926C947182F80bE81730bC4d22F81
+token_address		 = "0x679809CB55871173aD52664959e4ad37c89e3e89"
+factory_address      = "0x958dc8d320C7f7124829d35B249eE57bF0FB230c"
+faucet_address       = "0xEeffee04B43eec7e7cb79DA4C9602725b716DB23"
 
-w3.eth.default_account = wallet_address
+w3.eth.default_account = w3.eth.account.privateKeyToAccount(getPrivate())
+default_address = str(w3.eth.default_account.address)
+
 print(w3.eth.default_account)
+print()
 
 if __name__ == "__main__":
 	
 	token = w3.eth.contract(address = token_address, abi = getAbi("Caos"))
+	
+	
 	factory = w3.eth.contract(address = factory_address, abi = getAbi("Factory"))
 	faucet = w3.eth.contract(address = faucet_address, abi = getAbi("Faucet"))
-	decimals = token.functions.decimals().call()
-	balance = token.functions.balanceOf(wallet_address).call() / 10**decimals
+	decimals = token.functions.decimals().call({'from': default_address})
+	balance = token.functions.balanceOf(default_address).call({'from': default_address}) / 10**decimals
 
 	print("CAOS token balance")
 	print(balance)
@@ -40,6 +41,7 @@ if __name__ == "__main__":
 
 	while ans != "q" and ans != None:
 
+	
 		if ans == "a":
 			print("Adding self to player list (onlyowner)")
 			factory.functions.ownerAdd(wallet_address).call({'from': w3.eth.accounts[0]})
@@ -75,7 +77,5 @@ if __name__ == "__main__":
 
 
 
-
 		ans = input("what u want to do?")
-
-
+		

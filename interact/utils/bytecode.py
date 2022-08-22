@@ -1,7 +1,7 @@
 #bytecode.py
 import json
 
-PATH_TRUFFLE_WK = '/Users/saramilone/ricciobbello/attr-actor'
+PATH_TRUFFLE_WK = '/Users/saramilone/ricciobbello/attr-act'
 
 
 def getBytecode(contract_name):

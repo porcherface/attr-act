@@ -1,0 +1,137 @@
+
+^CMacBook-Pro-di-Sara-5:attr-actor saramilone$ truffle migrate --network ropsten
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/factory.sol
+> Compiling ./contracts/faucet.sol
+> Artifacts written to /Users/saramilone/ricciobbello/attr-actor/build/contracts
+> Compiled successfully using:
+   - solc: 0.8.16+commit.07a7930e.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'ropsten'
+> Network id:      3
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x088629ffd7788797450ac15d3671ed7510a0697f71d4b6cc33336b4313e3092f
+   > Blocks: 2            Seconds: 24
+   > contract address:    0xA4fad8560f5e686e7BAa03922Da6E2bB54bA1A2E
+   > block number:        12842070
+   > block timestamp:     1661178852
+   > account:             0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+   > balance:             19.663508543408553323
+   > gas used:            250154 (0x3d12a)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000625385001751078 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 12842071)
+   > confirmation number: 2 (block: 12842072)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.000625385001751078 ETH
+
+
+2_deploy_caos.js
+================
+
+   Deploying 'Caos'
+   ----------------
+   > transaction hash:    0xa5274a1160e6a52f98ea2b3d71319e9989803ce591810b4bcf3a3aae969ac53a
+   > Blocks: 0            Seconds: 4
+   > contract address:    0x679809CB55871173aD52664959e4ad37c89e3e89
+   > block number:        12842098
+   > block timestamp:     1661179200
+   > account:             0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+   > balance:             19.656266530888275688
+   > gas used:            1425446 (0x15c026)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003563615009978122 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 12842099)
+   > confirmation number: 2 (block: 12842100)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.003563615009978122 ETH
+
+
+3_deploy_factory.js
+===================
+
+   Deploying 'Factory'
+   -------------------
+   > transaction hash:    0xa000c879c9235dd6659e85b8a5b26c6d731fc7f35b0800e7cb85e54e76bdbbc7
+   > Blocks: 0            Seconds: 8
+   > contract address:    0x958dc8d320C7f7124829d35B249eE57bF0FB230c
+   > block number:        12842118
+   > block timestamp:     1661179440
+   > account:             0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+   > balance:             19.644605428355624601
+   > gas used:            2317814 (0x235df6)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.005794535016224698 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 12842119)
+   > confirmation number: 2 (block: 12842120)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.005794535016224698 ETH
+
+
+4_deploy_faucet.js
+==================
+
+   Deploying 'Faucet'
+   ------------------
+   > transaction hash:    0x0f88f365fe51b36bf23593562648a814356ef8b45ace9b30daabadd14051448d
+   > Blocks: 0            Seconds: 12
+   > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
+   > block number:        12842129
+   > block timestamp:     1661179584
+   > account:             0x0184c1E2604C59eB49EDBaD5848905b2A70b1Dfb
+   > balance:             19.638890485839622762
+   > gas used:            1128582 (0x113886)
+   > gas price:           2.500000007 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002821455007900074 ETH
+
+   Pausing for 2 confirmations...
+
+   -------------------------------
+   > confirmation number: 1 (block: 12842130)
+   > confirmation number: 2 (block: 12842131)
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.002821455007900074 ETH
+
+Summary
+=======
+> Total deployments:   4
+> Final cost:          0.012804990035853972 ETH
+
+
+MacBook-Pro-di-Sara-5:attr-actor saramilone$ 

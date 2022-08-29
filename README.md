@@ -57,3 +57,8 @@ Here is all you need to interact with these contract on Ropsten, Ropsten is free
 	FAUCET    > contract address:    0xEeffee04B43eec7e7cb79DA4C9602725b716DB23
 
 (if you need some ropstenETH you can have em here: https://faucet.egorfine.com/)
+
+# take a look at my other solidity projects:
+
+ - conec-for, a connect four blockchain implementation
+ https://github.com/porcherface/conec-for
